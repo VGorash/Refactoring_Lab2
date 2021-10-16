@@ -23,5 +23,11 @@ public interface ContactRepository extends JpaRepository<Contact, Integer> {
     @Query("select c from Contact c where upper(c.email) like upper(?1) and c.userId = ?2")
     List<Contact> getByEmail(String str, String username);
 
+    @Query("select c from Contact c where (upper(c.name) like upper(?1) " +
+            "or upper(c.surname) like upper(?1)" +
+            "or upper(c.phone) like upper(?1)" +
+            "or upper(c.email) like upper(?1)) and c.userId = ?2")
+    List<Contact> getBySubstring(String query, String username);
+
     List<Contact> findAllByUserId(String username);
 }

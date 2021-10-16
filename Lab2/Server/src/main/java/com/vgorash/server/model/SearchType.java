@@ -5,5 +5,6 @@ public enum SearchType {
     SURNAME,
     FULLNAME,
     PHONE,
-    EMAIL
+    EMAIL,
+    ALL
 }

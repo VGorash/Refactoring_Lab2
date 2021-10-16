@@ -31,6 +31,8 @@ public class ContactService {
                 return contactRepository.getByEmail(likeQuery, userId);
             case PHONE:
                 return contactRepository.getByPhone(likeQuery, userId);
+            case ALL:
+                return contactRepository.getBySubstring(likeQuery, userId);
         }
         return null;
     }
