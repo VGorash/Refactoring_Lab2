@@ -7,8 +7,6 @@ import java.io.IOException;
 import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
-import java.nio.ByteBuffer;
-import java.util.concurrent.Flow;
 
 public class Requests {
     private static final String defaultUrl = "http://localhost:8080/api/contacts";
